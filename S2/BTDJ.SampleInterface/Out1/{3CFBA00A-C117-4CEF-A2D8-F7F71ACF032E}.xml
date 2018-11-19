@@ -1,0 +1,7 @@
+﻿<ns0:OptClient xmlns:ns0="http://OptumClient.V1">
+  <Data>
+    <PtName>PtName_0</PtName>
+    <Age>10</Age>
+    <Treatment>Treatment_0</Treatment>
+  </Data>
+</ns0:OptClient>

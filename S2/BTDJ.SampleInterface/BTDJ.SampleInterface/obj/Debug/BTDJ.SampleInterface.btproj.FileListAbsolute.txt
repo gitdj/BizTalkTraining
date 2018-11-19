@@ -1,0 +1,5 @@
+E:\POCs\OptumBT\BTDJ.SampleInterface\BTDJ.SampleInterface\bin\Debug\BTDJ.SampleInterface.dll
+E:\POCs\OptumBT\BTDJ.SampleInterface\BTDJ.SampleInterface\bin\Debug\BTDJ.SampleInterface.pdb
+E:\POCs\OptumBT\BTDJ.SampleInterface\BTDJ.SampleInterface\bin\Debug\BTDJ.Utilities.dll
+E:\POCs\OptumBT\BTDJ.SampleInterface\BTDJ.SampleInterface\obj\Debug\BTDJ.SampleInterface.dll
+E:\POCs\OptumBT\BTDJ.SampleInterface\BTDJ.SampleInterface\obj\Debug\BTDJ.SampleInterface.pdb

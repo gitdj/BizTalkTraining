@@ -1,0 +1,10 @@
+E:\POCs\OptumBT\BTDJ.SampleInterface\BTDJ.Utilities\bin\Debug\BTDJ.Utilities.dll
+E:\POCs\OptumBT\BTDJ.SampleInterface\BTDJ.Utilities\bin\Debug\BTDJ.Utilities.pdb
+E:\POCs\OptumBT\BTDJ.SampleInterface\BTDJ.Utilities\obj\Debug\BTDJ.Utilities.dll
+E:\POCs\OptumBT\BTDJ.SampleInterface\BTDJ.Utilities\obj\Debug\BTDJ.Utilities.pdb
+E:\POCs\OptumBT\BTDJ.SampleInterface\BTDJ.Utilities\obj\Debug\BTDJ.Utilities.csprojResolveAssemblyReference.cache
+E:\POCs\OptumBT\BT-Sessions\S1\BTDJ.SampleInterface\BTDJ.Utilities\bin\Debug\BTDJ.Utilities.dll
+E:\POCs\OptumBT\BT-Sessions\S1\BTDJ.SampleInterface\BTDJ.Utilities\bin\Debug\BTDJ.Utilities.pdb
+E:\POCs\OptumBT\BT-Sessions\S1\BTDJ.SampleInterface\BTDJ.Utilities\obj\Debug\BTDJ.Utilities.csprojResolveAssemblyReference.cache
+E:\POCs\OptumBT\BT-Sessions\S1\BTDJ.SampleInterface\BTDJ.Utilities\obj\Debug\BTDJ.Utilities.dll
+E:\POCs\OptumBT\BT-Sessions\S1\BTDJ.SampleInterface\BTDJ.Utilities\obj\Debug\BTDJ.Utilities.pdb
