@@ -1,0 +1,162 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="515c78b7-f4d8-4423-812f-6a82dc72baf6" LowerBound="1.1" HigherBound="36.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="BTDJ.SampleInterface" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="PortType" OID="4f5fece5-90f3-47f1-b88b-882887321776" ParentLink="Module_PortType" LowerBound="4.1" HigherBound="11.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="PortType_StartSendOut" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="b65fddf5-ceee-4a38-b932-b063fb0f3b76" ParentLink="PortType_OperationDeclaration" LowerBound="6.1" HigherBound="10.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_1" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="43bd59cc-f734-490a-b2e9-87c496366486" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="8.13" HigherBound="8.27">
+                    <om:Property Name="Ref" Value="BTDJ.SampleInterface.OptumCanonical" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="ServiceDeclaration" OID="0336c02b-6910-40f5-ae2f-542c8a51d10e" ParentLink="Module_ServiceDeclaration" LowerBound="11.1" HigherBound="35.1">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="True" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="SimpleStartOrchs" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="MessageDeclaration" OID="ae601806-65ca-4673-b572-424ec2a8a578" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="16.1" HigherBound="17.1">
+                <om:Property Name="Type" Value="BTDJ.SampleInterface.OptumCanonical" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="SendMsgOut" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="ServiceBody" OID="7cd56e6e-5c97-429b-9ec1-e93358274b40" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageDeclaration" OID="29cd3f61-f26d-4fac-8ab3-5c8cce934156" ParentLink="ServiceBody_Declaration" LowerBound="17.15" HigherBound="17.43">
+                    <om:Property Name="Type" Value="BTDJ.SampleInterface.OptumClient" />
+                    <om:Property Name="ParamDirection" Value="In" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="RcvMsgIn" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="VariableAssignment" OID="38c1a76c-02b6-4d1a-a629-e30ffbe079e9" ParentLink="ServiceBody_Statement" LowerBound="19.1" HigherBound="21.1">
+                    <om:Property Name="Expression" Value="System.Diagnostics.EventLog.WriteEntry(&quot;Simple Odx-Start Odx&quot;,&quot;Running&quot;);" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Expression_1" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Construct" OID="62518205-9654-429f-bde3-a40d1c53ce02" ParentLink="ServiceBody_Statement" LowerBound="21.1" HigherBound="27.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="ConstructMessage_1" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="Transform" OID="392ead07-a8fb-46bc-90e0-281e97d69149" ParentLink="ComplexStatement_Statement" LowerBound="24.1" HigherBound="26.1">
+                        <om:Property Name="ClassName" Value="BTDJ.SampleInterface.OptumClientMap" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Transform_1" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="MessagePartRef" OID="41c21cf0-7367-4681-843b-f122bd78faf5" ParentLink="Transform_InputMessagePartRef" LowerBound="25.79" HigherBound="25.87">
+                            <om:Property Name="MessageRef" Value="RcvMsgIn" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_1" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                        <om:Element Type="MessagePartRef" OID="35397040-94b9-471a-925a-f08fcb2910a9" ParentLink="Transform_OutputMessagePartRef" LowerBound="25.28" HigherBound="25.38">
+                            <om:Property Name="MessageRef" Value="SendMsgOut" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_2" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="MessageRef" OID="4b6186d6-5f39-4f21-b236-88de2606a370" ParentLink="Construct_MessageRef" LowerBound="22.23" HigherBound="22.33">
+                        <om:Property Name="Ref" Value="SendMsgOut" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Send" OID="8fa7eed6-fd02-4ac4-a673-d9c5926bbc50" ParentLink="ServiceBody_Statement" LowerBound="27.1" HigherBound="29.1">
+                    <om:Property Name="PortName" Value="Port_StartOdxOut" />
+                    <om:Property Name="MessageName" Value="SendMsgOut" />
+                    <om:Property Name="OperationName" Value="Operation_1" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Send_1" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Delay" OID="95ecdef7-e332-4389-997f-8000c74cd155" ParentLink="ServiceBody_Statement" LowerBound="29.1" HigherBound="31.1">
+                    <om:Property Name="Timeout" Value="new System.TimeSpan(0,0,30);" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Delay_1" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="VariableAssignment" OID="1d6a6aeb-41ea-46c8-84d8-1f0d90bb0c0b" ParentLink="ServiceBody_Statement" LowerBound="31.1" HigherBound="33.1">
+                    <om:Property Name="Expression" Value="System.Diagnostics.EventLog.WriteEntry(&quot;Simple Odx-Start Odx&quot;,&quot;Completed&quot;);" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Expression_1" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="6054e425-2837-4b23-804f-4378923ace4d" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="14.1" HigherBound="16.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Right" />
+                <om:Property Name="PortIndex" Value="10" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="BTDJ.SampleInterface.PortType_StartSendOut" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Port_StartOdxOut" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="16962079-8e38-4fc1-8edc-274332e50636" ParentLink="PortDeclaration_CLRAttribute" LowerBound="14.1" HigherBound="15.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module BTDJ.SampleInterface
+{
+    internal porttype PortType_StartSendOut
+    {
+        oneway Operation_1
+        {
+            OptumCanonical
+        };
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service SimpleStartOrchs
+    {
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port uses PortType_StartSendOut Port_StartOdxOut;
+        message OptumCanonical SendMsgOut;
+        body (message OptumClient RcvMsgIn)
+        {
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("38c1a76c-02b6-4d1a-a629-e30ffbe079e9")]
+            System.Diagnostics.EventLog.WriteEntry("Simple Odx-Start Odx","Running");
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("62518205-9654-429f-bde3-a40d1c53ce02")]
+            construct SendMsgOut
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("392ead07-a8fb-46bc-90e0-281e97d69149")]
+                transform (SendMsgOut) = BTDJ.SampleInterface.OptumClientMap (RcvMsgIn);
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("8fa7eed6-fd02-4ac4-a673-d9c5926bbc50")]
+            send (Port_StartOdxOut.Operation_1, SendMsgOut);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("95ecdef7-e332-4389-997f-8000c74cd155")]
+            delay new System.TimeSpan(0,0,30);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("1d6a6aeb-41ea-46c8-84d8-1f0d90bb0c0b")]
+            System.Diagnostics.EventLog.WriteEntry("Simple Odx-Start Odx","Completed");
+        }
+    }
+}
+

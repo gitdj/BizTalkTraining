@@ -1,0 +1,207 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="17e80ba6-f390-4221-9843-b2471dc693f2" LowerBound="1.1" HigherBound="61.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="BTDJ.SampleInterface" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="PortType" OID="761a5cf8-a3c4-47e2-bccd-d7093131315b" ParentLink="Module_PortType" LowerBound="4.1" HigherBound="11.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="PortType_DstPT" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="45c39bc1-9998-43a7-b949-64da20f09e04" ParentLink="PortType_OperationDeclaration" LowerBound="6.1" HigherBound="10.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_1" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="79bbf755-5427-4c21-b150-a93753480f1e" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="8.13" HigherBound="8.27">
+                    <om:Property Name="Ref" Value="BTDJ.SampleInterface.OptumCanonical" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="57012920-d876-467c-a442-40a7c26a5d41" ParentLink="Module_PortType" LowerBound="11.1" HigherBound="18.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="PortType_bresend" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="d76bbec6-940a-4804-b2bd-290e06d35f13" ParentLink="PortType_OperationDeclaration" LowerBound="13.1" HigherBound="17.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_1" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="8c615a1f-588c-425b-8506-3c1635585369" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="15.13" HigherBound="15.27">
+                    <om:Property Name="Ref" Value="BTDJ.SampleInterface.OptumCanonical" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="ServiceDeclaration" OID="e1a3d98d-b90c-451d-8599-baa9608fc80a" ParentLink="Module_ServiceDeclaration" LowerBound="18.1" HigherBound="60.1">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="DestinationProcess" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="MessageDeclaration" OID="7a1db802-c464-4004-9198-2982245696c6" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="25.1" HigherBound="26.1">
+                <om:Property Name="Type" Value="BTDJ.SampleInterface.OptumCanonical" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="MsgCanonical" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="ServiceBody" OID="45d97e78-6d61-4218-86da-eed6576683b4" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="Receive" OID="6f139d58-2743-4061-9b8b-dcbf6c9e095b" ParentLink="ServiceBody_Statement" LowerBound="28.1" HigherBound="30.1">
+                    <om:Property Name="Activate" Value="True" />
+                    <om:Property Name="PortName" Value="Port_In" />
+                    <om:Property Name="MessageName" Value="MsgCanonical" />
+                    <om:Property Name="OperationName" Value="Operation_1" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Receive_1" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="DNFPredicate" OID="86a7347e-41fd-42bd-8e18-6a0af729b625" ParentLink="Receive_DNFPredicate">
+                        <om:Property Name="LHS" Value="BTDJ.SampleInterface.ServiceName" />
+                        <om:Property Name="RHS" Value="&quot;DSTPROCESS&quot;" />
+                        <om:Property Name="Grouping" Value="AND" />
+                        <om:Property Name="Operator" Value="Equals" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="VariableAssignment" OID="b84890ec-6b27-4cfb-b3c8-804ba3426097" ParentLink="ServiceBody_Statement" LowerBound="30.1" HigherBound="32.1">
+                    <om:Property Name="Expression" Value="System.Diagnostics.EventLog.WriteEntry(&quot;dst process&quot;, &quot;Msg sent to target system&quot;);" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Expression_1" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="CallRules" OID="52f1a7f8-7ed0-476e-ae68-a7452dec7fa8" ParentLink="ServiceBody_Statement" LowerBound="32.1" HigherBound="56.1">
+                    <om:Property Name="PolicyName" Value="OptumAgeLeveMapping" />
+                    <om:Property Name="PolicyVersion" Value="-1" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="CallRules_1" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="RulesParameterRef" OID="9c660a68-b9fa-41d3-be90-14db4d2101f0" ParentLink="CallRules_RulesParameterRef">
+                        <om:Property Name="Reference" Value="MsgCanonical" />
+                        <om:Property Name="Alias" Value="BTDJ.SampleInterface.OptumCanonical" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="RulesParameterRef_1" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Send" OID="1b13f2fd-9448-4abf-a367-5795461039cf" ParentLink="ServiceBody_Statement" LowerBound="56.1" HigherBound="58.1">
+                    <om:Property Name="PortName" Value="Port_1" />
+                    <om:Property Name="MessageName" Value="MsgCanonical" />
+                    <om:Property Name="OperationName" Value="Operation_1" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Send_1" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="c71ffdaa-eeb6-46df-bbca-2ea5dd2f4cba" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="21.1" HigherBound="23.1">
+                <om:Property Name="PortModifier" Value="Implements" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="-1" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="BTDJ.SampleInterface.PortType_DstPT" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Port_In" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="DirectBindingAttribute" OID="f78d7ae4-d026-425a-ba56-85c6d113fb1b" ParentLink="PortDeclaration_CLRAttribute" LowerBound="21.1" HigherBound="22.1">
+                    <om:Property Name="DirectBindingType" Value="MessageBox" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="e7869a90-97b9-496f-8532-a17dc2118f19" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="23.1" HigherBound="25.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Right" />
+                <om:Property Name="PortIndex" Value="12" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="BTDJ.SampleInterface.PortType_bresend" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Port_1" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="4ba9fed0-34d1-41e9-b6a6-9746773c20ad" ParentLink="PortDeclaration_CLRAttribute" LowerBound="23.1" HigherBound="24.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module BTDJ.SampleInterface
+{
+    internal porttype PortType_DstPT
+    {
+        oneway Operation_1
+        {
+            OptumCanonical
+        };
+    };
+    internal porttype PortType_bresend
+    {
+        oneway Operation_1
+        {
+            OptumCanonical
+        };
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service DestinationProcess
+    {
+        [Microsoft.XLANGs.BaseTypes.DirectBinding()]
+        port implements PortType_DstPT Port_In;
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port uses PortType_bresend Port_1;
+        message OptumCanonical MsgCanonical;
+        body ()
+        {
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("6f139d58-2743-4061-9b8b-dcbf6c9e095b")]
+            activate ((BTDJ.SampleInterface.ServiceName == "DSTPROCESS"))receive (Port_In.Operation_1, MsgCanonical);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("b84890ec-6b27-4cfb-b3c8-804ba3426097")]
+            System.Diagnostics.EventLog.WriteEntry("dst process", "Msg sent to target system");
+
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("52f1a7f8-7ed0-476e-ae68-a7452dec7fa8")]
+            scope
+            {
+                Microsoft.RuleEngine.Policy  policy_1__;
+                System.Xml.XmlDocument policyParam_1_1__;
+                Microsoft.RuleEngine.TypedXmlDocument policyParamAsTXD_1_1__;
+
+                body
+                {
+                                        policyParam_1_1__ = MsgCanonical;
+                    policyParamAsTXD_1_1__ = new Microsoft.RuleEngine.TypedXmlDocument("BTDJ.SampleInterface.OptumCanonical", policyParam_1_1__);
+
+                    policy_1__ = new Microsoft.RuleEngine.Policy("OptumAgeLeveMapping");
+                    policy_1__.Execute(
+                        policyParamAsTXD_1_1__);
+                    construct MsgCanonical
+                    {
+                        MsgCanonical = policyParamAsTXD_1_1__.Document;
+                    }
+
+                    policy_1__.Dispose();
+                }
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("1b13f2fd-9448-4abf-a367-5795461039cf")]
+            send (Port_1.Operation_1, MsgCanonical);
+        }
+    }
+}
+

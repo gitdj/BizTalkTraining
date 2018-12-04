@@ -1,0 +1,20 @@
+<ns0:Canonical xmlns:ns0="http://BTDJ.SampleInterface.OptumCanonical">
+  <Record>
+    <Name>Patient Name:Name_1</Name>
+    <Age>10</Age>
+    <Treatment>Treatment_0</Treatment>
+    <AgeGroup>Level0</AgeGroup>
+  </Record>
+  <Record>
+    <Name>Patient Name:Name_2</Name>
+    <Age>17</Age>
+    <Treatment>Treatment_0</Treatment>
+    <AgeGroup>Level1</AgeGroup>
+  </Record>
+  <Record>
+    <Name>Patient Name:Name_3</Name>
+    <Age>55</Age>
+    <Treatment>Treatment_0</Treatment>
+    <AgeGroup>LevelX</AgeGroup>
+  </Record>
+</ns0:Canonical>

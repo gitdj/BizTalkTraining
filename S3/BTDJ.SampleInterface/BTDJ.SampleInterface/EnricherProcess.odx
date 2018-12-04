@@ -1,0 +1,235 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="eedb67a2-fdf6-436b-ac69-7f8aaf31a60c" LowerBound="1.1" HigherBound="49.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="BTDJ.SampleInterface" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="PortType" OID="b4ea91ca-43ba-488b-83e8-804f4ef5c0ca" ParentLink="Module_PortType" LowerBound="4.1" HigherBound="11.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="PortType_EnricherIn" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="946dfb8b-2cd9-4c77-9f1d-d9974f99e9dc" ParentLink="PortType_OperationDeclaration" LowerBound="6.1" HigherBound="10.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_1" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="4f9dff48-a8ca-4bdc-afe3-cd9a27b29069" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="8.13" HigherBound="8.24">
+                    <om:Property Name="Ref" Value="BTDJ.SampleInterface.OptumClient" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="f7af8a50-2686-44f1-a5f1-12885bc7de3c" ParentLink="Module_PortType" LowerBound="11.1" HigherBound="18.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="PortType_SendOutEnriched" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="26a52543-4a89-4da7-bfe7-cfc26a95ddce" ParentLink="PortType_OperationDeclaration" LowerBound="13.1" HigherBound="17.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_1" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="a9371106-4a26-4a49-96e0-ebdeaed695b5" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="15.13" HigherBound="15.27">
+                    <om:Property Name="Ref" Value="BTDJ.SampleInterface.OptumCanonical" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="ServiceDeclaration" OID="a529ea1b-ee94-4ec1-9bc1-8480ff7b1e94" ParentLink="Module_ServiceDeclaration" LowerBound="22.1" HigherBound="48.1">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="EnricherProcess" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="CorrelationDeclaration" OID="863e524c-e4a5-4185-965b-9503de56d3b6" ParentLink="ServiceDeclaration_CorrelationDeclaration" LowerBound="29.1" HigherBound="30.1">
+                <om:Property Name="Type" Value="BTDJ.SampleInterface.CorrelationType_1" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Correlation_1" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="StatementRef" OID="28e2e6a5-cfdd-4c91-970f-05a570ab60b1" ParentLink="CorrelationDeclaration_StatementRef" LowerBound="45.57" HigherBound="45.81">
+                    <om:Property Name="Initializes" Value="True" />
+                    <om:Property Name="Ref" Value="ea33e4c5-e771-4403-b87b-e84672732590" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="StatementRef_1" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="ed44c679-15a7-4782-a9f4-14011b05e168" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="30.1" HigherBound="31.1">
+                <om:Property Name="Type" Value="BTDJ.SampleInterface.OptumClient" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="MsgIn" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="1e04585b-af4f-48dc-b551-148ad4048838" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="31.1" HigherBound="32.1">
+                <om:Property Name="Type" Value="BTDJ.SampleInterface.OptumCanonical" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="EnrichedMsgOut" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="ServiceBody" OID="d1b6ac9b-e49b-4cb2-bccb-cf14227afc3e" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="Receive" OID="4dab1fec-0821-475a-943e-c6f3f2854ce5" ParentLink="ServiceBody_Statement" LowerBound="34.1" HigherBound="36.1">
+                    <om:Property Name="Activate" Value="True" />
+                    <om:Property Name="PortName" Value="Port_In" />
+                    <om:Property Name="MessageName" Value="MsgIn" />
+                    <om:Property Name="OperationName" Value="Operation_1" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Receive_1" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Construct" OID="ed74438b-a8bb-4c66-afd2-3b0eecc0d022" ParentLink="ServiceBody_Statement" LowerBound="36.1" HigherBound="44.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="ConstructMessage_1" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="Transform" OID="d33f001e-1f86-4c44-871e-94ab93dd21c7" ParentLink="ComplexStatement_Statement" LowerBound="39.1" HigherBound="41.1">
+                        <om:Property Name="ClassName" Value="BTDJ.SampleInterface.OptumClientMap" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Transform_1" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="MessagePartRef" OID="754205c5-eb6f-42fe-8f00-452c5294aea0" ParentLink="Transform_InputMessagePartRef" LowerBound="40.83" HigherBound="40.88">
+                            <om:Property Name="MessageRef" Value="MsgIn" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_1" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                        <om:Element Type="MessagePartRef" OID="04d9772b-ac6d-439c-83d4-18ab5120a4cb" ParentLink="Transform_OutputMessagePartRef" LowerBound="40.28" HigherBound="40.42">
+                            <om:Property Name="MessageRef" Value="EnrichedMsgOut" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_2" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="MessageAssignment" OID="d88477e7-88e9-4f42-87a9-86e8d9a96e10" ParentLink="ComplexStatement_Statement" LowerBound="41.1" HigherBound="43.1">
+                        <om:Property Name="Expression" Value="EnrichedMsgOut(BTDJ.SampleInterface.ServiceName) = &quot;DSTPROCESS&quot;;" />
+                        <om:Property Name="ReportToAnalyst" Value="False" />
+                        <om:Property Name="Name" Value="MessageAssignment_1" />
+                        <om:Property Name="Signal" Value="True" />
+                    </om:Element>
+                    <om:Element Type="MessageRef" OID="e04e363b-43f7-47ed-a045-d981fd15bae7" ParentLink="Construct_MessageRef" LowerBound="37.23" HigherBound="37.37">
+                        <om:Property Name="Ref" Value="EnrichedMsgOut" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Send" OID="ea33e4c5-e771-4403-b87b-e84672732590" ParentLink="ServiceBody_Statement" LowerBound="44.1" HigherBound="46.1">
+                    <om:Property Name="PortName" Value="Port_Out" />
+                    <om:Property Name="MessageName" Value="EnrichedMsgOut" />
+                    <om:Property Name="OperationName" Value="Operation_1" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Send_1" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="b50f3055-647d-43fc-b480-e1474faecbf2" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="25.1" HigherBound="27.1">
+                <om:Property Name="PortModifier" Value="Implements" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="-1" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="BTDJ.SampleInterface.PortType_EnricherIn" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Port_In" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="29e40123-981c-4405-ba4c-4fc9b6713f1f" ParentLink="PortDeclaration_CLRAttribute" LowerBound="25.1" HigherBound="26.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="dc80dc62-403b-43f6-b8e8-4461e1f76803" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="27.1" HigherBound="29.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Right" />
+                <om:Property Name="PortIndex" Value="-1" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="BTDJ.SampleInterface.PortType_SendOutEnriched" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Port_Out" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="DirectBindingAttribute" OID="6636e2e3-2c6f-4eb6-afe0-71fe7da33772" ParentLink="PortDeclaration_CLRAttribute" LowerBound="27.1" HigherBound="28.1">
+                    <om:Property Name="DirectBindingType" Value="MessageBox" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="CorrelationType" OID="af0cae2e-c79b-40cf-b13a-9f66073c60c1" ParentLink="Module_CorrelationType" LowerBound="18.1" HigherBound="22.1">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="CorrelationType_1" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="PropertyRef" OID="2de0cbef-ae81-4adf-88e6-a1509f301d58" ParentLink="CorrelationType_PropertyRef" LowerBound="20.9" HigherBound="20.20">
+                <om:Property Name="Ref" Value="BTDJ.SampleInterface.ServiceName" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="PropertyRef_1" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module BTDJ.SampleInterface
+{
+    internal porttype PortType_EnricherIn
+    {
+        oneway Operation_1
+        {
+            OptumClient
+        };
+    };
+    internal porttype PortType_SendOutEnriched
+    {
+        oneway Operation_1
+        {
+            OptumCanonical
+        };
+    };
+    internal correlationtype CorrelationType_1
+    {
+        ServiceName
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service EnricherProcess
+    {
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port implements PortType_EnricherIn Port_In;
+        [Microsoft.XLANGs.BaseTypes.DirectBinding()]
+        port uses PortType_SendOutEnriched Port_Out;
+        correlation CorrelationType_1 Correlation_1;
+        message OptumClient MsgIn;
+        message OptumCanonical EnrichedMsgOut;
+        body ()
+        {
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("4dab1fec-0821-475a-943e-c6f3f2854ce5")]
+            activate receive (Port_In.Operation_1, MsgIn);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("ed74438b-a8bb-4c66-afd2-3b0eecc0d022")]
+            construct EnrichedMsgOut
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("d33f001e-1f86-4c44-871e-94ab93dd21c7")]
+                transform (EnrichedMsgOut) = BTDJ.SampleInterface.OptumClientMap (MsgIn);
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("d88477e7-88e9-4f42-87a9-86e8d9a96e10")]
+                EnrichedMsgOut(BTDJ.SampleInterface.ServiceName) = "DSTPROCESS";
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("ea33e4c5-e771-4403-b87b-e84672732590")]
+            send (Port_Out.Operation_1, EnrichedMsgOut, initialize Correlation_1);
+        }
+    }
+}
+
